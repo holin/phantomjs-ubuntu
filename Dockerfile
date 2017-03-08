@@ -1,6 +1,6 @@
 #
-# Ubuntu Phantomjs 2.5.0 beta Dockerfile
-# Use tenxcloud mirror and 163 mirror sources.listX
+# Run phamtomjs 2.5.0-beta on Ubuntu 16.04 with Docker
+# Use tenxcloud mirror and mirror.163.com mirror sources.listX
 #
 
 # Pull base image.
@@ -35,17 +35,6 @@ ENV LC_ALL zh_CN.UTF-8
 COPY ./bin/* /bin/
 
 EXPOSE 8910
-
-# build
-# docker build -t phantomjs-ubuntu .
-
-# run
-# docker run --rm  -p 8910:8910 phantomjs-ubuntu /bin/phantomjs --webdriver=8910
-# docker run -d -p 8910:8910 phantomjs-ubuntu phantomjs --webdriver=8910
-# or
-# docker run --rm  -it phantomjs-ubuntu /bin/bash
-# phantomjs /bin/loader.js http://192.168.21.126:3000/composing?id=263
-
 
 # Define default command.
 CMD ["/bin/phantomjs", "-v"]
