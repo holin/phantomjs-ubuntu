@@ -39,6 +39,9 @@ COPY ./bin/* /bin/
 
 EXPOSE 8910
 
+# build
+# docker build -t phantomjs-ubuntu .
+
 # run
 # docker run --rm  -p 8910:8910 phantomjs-ubuntu /bin/phantomjs --webdriver=8910
 # docker run -d -p 8910:8910 phantomjs-ubuntu phantomjs --webdriver=8910
@@ -48,5 +51,4 @@ EXPOSE 8910
 
 
 # Define default command.
-ENTRYPOINT ["/bin/phantomjs"]
-CMD ["-v"]
+CMD ["/bin/phantomjs", "-v"]
