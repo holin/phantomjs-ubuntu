@@ -9,7 +9,6 @@ FROM ubuntu:16.04
 # update sources.list
 COPY sources.list /etc/apt/sources.list
 
-
 RUN apt-get update && apt-get install -y \
   apt-utils \
 && rm -rf /var/lib/apt/lists/*
@@ -17,14 +16,12 @@ RUN apt-get update && apt-get install -y \
 # Install runtime & fonts
 RUN apt-get update && apt-get install -y \
   libfontconfig \
-  libfontconfig-dev \
   libfreetype6-dev \
   libjpeg-dev \
   libssl-dev \
   libxslt-dev \
   libhyphen-dev \
   fonts-arphic-uming \
-  fonts-unfonts-core \
 && rm -rf /var/lib/apt/lists/*
 
 
