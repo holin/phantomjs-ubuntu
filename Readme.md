@@ -9,7 +9,7 @@
 
 ```bash
 docker run --rm  -p 8910:8910 phantomjs-ubuntu /bin/phantomjs --webdriver=8910
-docker run -d --rm -p 8910:8910 phantomjs-ubuntu phantomjs --webdriver=8910
+docker run -d -p 8910:8910 phantomjs-ubuntu phantomjs --webdriver=8910
 # or
 docker run --rm  -it phantomjs-ubuntu /bin/bash
 phantomjs /bin/loader.js http://192.168.21.126:3000/composing?id=263
